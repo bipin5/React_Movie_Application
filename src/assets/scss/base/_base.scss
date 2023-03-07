@@ -81,7 +81,7 @@ button {
   }
   
   h5 {
-    @extend .fw-normal;
+    @extend .fw-normal !optional;
   
     font-family: $acumin-pro-font-family;
     font-size: $h5-font-size;
