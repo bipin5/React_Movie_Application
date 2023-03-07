@@ -3,7 +3,7 @@ import Image from "components/Images/image";
 export default function Details() {
   return (
     <>
-      <div className="p-2 movie-details-container">
+      <div className="p-2 h-50 w-100 movie-details-container">
         <div className="position-absolute text-white card-details">
           <h1 className="text-uppercase fs-3">
             ANT-MAN AND THE WASP: QUANTUMANIA
@@ -17,7 +17,7 @@ export default function Details() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              class="bi bi-play"
+              className="bi bi-play"
               viewBox="0 0 16 16"
             >
               {" "}
