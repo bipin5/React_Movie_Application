@@ -1,7 +1,7 @@
 import axios from "axios";
 import { baseURL, API_KEY } from "constants/constants";
 
-export default async function genreApi() {
+export default async function GenreApi() {
   try {
     const response = await axios.get(
       `${baseURL}/genre/movie/list?api_key=${API_KEY}`

@@ -1,4 +1,4 @@
-import "../../assets/scss/index.scss";
+import "assets/scss/index.scss";
 
 export default function Image({ selectedImg, title }) {
   return (

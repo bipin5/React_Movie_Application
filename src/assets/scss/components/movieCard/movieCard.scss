@@ -9,3 +9,9 @@
 .next-btn{
     right: 1%;
 }
+
+.movie-card-hover:hover{
+    transform: scale(1.09);
+    transform-origin: bottom;
+    transition: transform 0.25s ease-out;
+}

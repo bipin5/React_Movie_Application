@@ -1,31 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Buttons() {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   const previousHandler = () => {
     const slider = document.querySelector(".banner-container");
-    const newScrollLeft = Math.max(scrollLeft - 300, 0);
 
-    setScrollLeft(newScrollLeft);
-    slider.scrollLeft = newScrollLeft;
+    setScrollLeft(scrollLeft === 0 ? 9 : scrollLeft - 1);
+    slider.scrollLeft = slider.scrollLeft - 300;
   };
 
   const nextHandler = () => {
     const slider = document.querySelector(".banner-container");
-    const newScrollLeft = Math.min(
-      scrollLeft + 300,
-      slider.scrollWidth - slider.clientWidth
-    );
 
-    setScrollLeft(newScrollLeft);
-    slider.scrollLeft = newScrollLeft;
+    setScrollLeft(scrollLeft === 10 ? 0 : scrollLeft + 1);
+    slider.scrollLeft = slider.scrollLeft + 300;
   };
 
+  useEffect(() => {
+    const slider = document.querySelector(".banner-container");
+
+    slider.childNodes.length &&
+      slider.childNodes[scrollLeft].scrollIntoView({ behavior: "smooth" });
+  }, [scrollLeft]);
+
   return (
-    <>
+    <div>
       <button
-        className="previous-btn position-absolute btn btn-primary"
+        className={`previous-btn position-absolute btn btn-primary ${
+          scrollLeft === 1 ? "movie-card-hover" : ""
+        }`}
         onClick={previousHandler}
       >
         <svg
@@ -62,6 +66,6 @@ export default function Buttons() {
           />{" "}
         </svg>
       </button>
-    </>
+    </div>
   );
 }
