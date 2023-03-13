@@ -1,0 +1,13 @@
+.main-navbar{
+    z-index: 1;
+}
+.navbar-collapse-scss{
+    align-items: center;
+}
+
+@media (min-width: 576px){
+    .navbar-collapse-scss {
+        background-color: transparent;
+        margin-left: 17em;
+    }
+}

@@ -10,8 +10,15 @@
     right: 1%;
 }
 
-.movie-card-hover:hover{
-    transform: scale(1.09);
+.movie-card:hover{
+    transform: scale(1.07);
     transform-origin: bottom;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.25s linear;
+}
+
+.active-card{
+    transform: scale(1.07);
+    transform-origin: bottom;
+    transition: transform 0.25s linear;
+
 }
