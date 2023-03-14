@@ -1,6 +1,8 @@
-import Image from "components/Images/image";
-import GenreApi from "API/genreApi";
 import { useEffect, useState } from "react";
+
+import Image from "components/Images/image";
+
+import GenreApi from "API/genreApi";
 
 export default function Details({ movie }) {
   const [genresData, setGenresData] = useState([]);
