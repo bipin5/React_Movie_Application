@@ -1,0 +1,32 @@
+.movie-details{
+    color: #e9e3e3;
+}
+
+.movie-details p{
+    color: #777d83;
+}
+
+.movie-details p span:first-child{
+    color: #e9e3e3;
+}
+
+.video-container{
+    height: 20%;
+    width: 55%;
+}
+
+.details-list{
+    display: grid;
+}
+
+@media (min-width: 576px){
+    .movie-details{
+        width: 75%;
+    }
+
+    .details-list{
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+}

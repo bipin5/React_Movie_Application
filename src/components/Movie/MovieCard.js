@@ -2,7 +2,7 @@ import { IMAGE_URL } from "constants/constants";
 
 export default function MovieCard({ movie }) {
   return (
-    <a className="text-decoration-none" href="">
+    <a className="text-decoration-none" href={`/detail/${movie.id}`}>
       <div className="m-sm-2">
         <div className="border rounded border-light border-3">
           <img
