@@ -1,7 +1,9 @@
 import { useState } from "react";
+
+import "assets/scss/index.scss";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import "assets/scss/index.scss";
 
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -42,7 +44,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item me-sm-5">
-              <a className="nav-link text-white" href="/">
+              <a className="nav-link text-white" href="/movies">
                 Movies
               </a>
             </li>
