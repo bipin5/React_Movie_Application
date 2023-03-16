@@ -10,11 +10,10 @@ import Actors from "components/Pages/MovieDetails/Actors";
 import Directors from "components/Pages/MovieDetails/Directors";
 import Genres from "components/Pages/MovieDetails/Genres";
 import Country from "components/Pages/MovieDetails/Country";
+import VideoPlayer from "components/Pages/MovieDetails/VideoPlayer";
 
 import MovieDetailsApi from "API/movieDetailsApi";
 import CreditsApi from "API/creditsApi";
-
-import { IMAGE_URL } from "constants/constants";
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState([]);
@@ -53,13 +52,7 @@ export default function MovieDetails() {
         <Navbar />
         <div className="pt-5">
           <div className="m-2">
-            <div className="video-container">
-              <img
-                className="img-fluid"
-                src={`${IMAGE_URL}${movie.poster_path}`}
-                alt={movie.original_title}
-              />
-            </div>
+            <VideoPlayer movie={movie} />
             <div className="p-2 m-sm-auto movie-details">
               <h3>{movie.original_title}</h3>
               <p>{movie.overview}</p>
