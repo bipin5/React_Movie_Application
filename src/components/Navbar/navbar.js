@@ -32,7 +32,7 @@ export default function Navbar() {
         </button>
 
         <div
-          className={`collapse navbar-collapse navbar-collapse-scss ${
+          className={`collapse navbar-collapse align-items-center navbar-collapse-scss ${
             isNavbarOpen ? "show" : ""
           }`}
           id="navbarContent"
