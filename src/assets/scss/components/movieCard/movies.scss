@@ -1,0 +1,13 @@
+.movies-list-container{
+    padding-top: 4rem;
+}
+
+.movies-list{
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media (min-width: 576px){
+    .movies-list{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
