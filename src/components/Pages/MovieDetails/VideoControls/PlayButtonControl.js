@@ -3,7 +3,11 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 
-export default function PlayButtonControl({ progress, videoRef }) {
+export default function PlayButtonControl({
+  progress,
+  videoRef,
+  handleProgressBarChange,
+}) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -13,6 +17,12 @@ export default function PlayButtonControl({ progress, videoRef }) {
       videoRef.current.play();
     }
     setIsPlaying(!isPlaying);
+  };
+
+  const onMouseDrag = (event) => {
+    const manualChange = Number(event.target.value);
+
+    handleProgressBarChange(manualChange);
   };
 
   return (
@@ -29,7 +39,9 @@ export default function PlayButtonControl({ progress, videoRef }) {
         className="progress-bar"
         min="0"
         max="100"
+        step="0.01"
         value={progress}
+        onChange={(e) => onMouseDrag(e)}
       ></input>
     </>
   );

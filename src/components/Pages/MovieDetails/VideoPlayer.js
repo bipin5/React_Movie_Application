@@ -8,6 +8,8 @@ import { faExpand } from "@fortawesome/free-solid-svg-icons";
 import SoundControl from "./VideoControls/SoundControl";
 import PlayButtonControl from "./VideoControls/PlayButtonControl";
 
+import Sample from "static/videos/sample.mp4";
+
 export default function VideoPlayer() {
   const [progress, setProgress] = useState(0);
   const videoRef = useRef(null);
@@ -19,6 +21,13 @@ export default function VideoPlayer() {
     const progress = (currentTime / duration) * 100;
 
     setProgress(progress);
+  };
+
+  const handleProgressBarChange = (time) => {
+    const currentTime = (time / 100) * videoRef.current.duration;
+
+    setProgress(time);
+    videoRef.current.currentTime = currentTime;
   };
 
   const onFullScreenHandler = () => {
@@ -37,13 +46,13 @@ export default function VideoPlayer() {
         ref={videoRef}
         onTimeUpdate={() => handleProgress()}
       >
-        <source src="http://techslides.com/demos/sample-videos/small.mp4" />
+        <source src={Sample} />
       </video>
       <div className="d-flex video-controls bg-light px-2 justify-content-between align-items-center">
         <PlayButtonControl
           progress={progress}
           videoRef={videoRef}
-          setProgress={setProgress}
+          handleProgressBarChange={handleProgressBarChange}
         />
         <SoundControl videoRef={videoRef} />
         <div role="button" onClick={() => onFullScreenHandler()}>
