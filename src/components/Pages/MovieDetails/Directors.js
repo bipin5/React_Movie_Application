@@ -14,13 +14,11 @@ export default function Directors({ credits }) {
   };
 
   return (
-    <>
-      <p>
-        <span className="fw-bold">Director: &nbsp;</span>
-        {getDirectors().map((director, index) => (
-          <span key={index}>{director}, &nbsp;</span>
-        ))}
-      </p>
-    </>
+    <p>
+      <span className="fw-bold">Director: &nbsp;</span>
+      {getDirectors().map((director, index) => (
+        <span key={index}>{director}, &nbsp;</span>
+      ))}
+    </p>
   );
 }

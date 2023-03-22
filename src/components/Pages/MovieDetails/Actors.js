@@ -14,15 +14,13 @@ export default function Actors({ credits }) {
   };
 
   return (
-    <>
-      <p>
-        <span className="fw-bold">Actor: &nbsp;</span>
-        {getActorsData()
-          .slice(0, 5)
-          .map((actor, index) => (
-            <span key={index}>{actor}, &nbsp;</span>
-          ))}
-      </p>
-    </>
+    <p>
+      <span className="fw-bold">Actor: &nbsp;</span>
+      {getActorsData()
+        .slice(0, 5)
+        .map((actor, index) => (
+          <span key={index}>{actor}, &nbsp;</span>
+        ))}
+    </p>
   );
 }
