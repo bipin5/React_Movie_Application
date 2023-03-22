@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 
+import { PAGES_TO_DISPLAY, PAGE_COUNT } from "constants/constants";
+
 export default function Pagination({ pageChangeHandler }) {
   const [pages, setPages] = useState([]);
   const [page, setPage] = useState();
 
-  const pagesToDisplay = 3,
-    pageCount = 20;
+  const pagesToDisplay = PAGES_TO_DISPLAY,
+    pageCount = PAGE_COUNT,
+    pageStart = PAGINAION_START;
 
   const buildPages = (pageIndex) => {
     setPage(pageIndex);
 
     let newPages = [],
-      start = 0,
+      start = pageStart,
       end = pagesToDisplay;
 
     if (pageIndex > (pagesToDisplay - 1) / 2) {
