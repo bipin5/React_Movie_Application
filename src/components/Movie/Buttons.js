@@ -6,8 +6,10 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { SLIDER_LENGTH } from "constants/constants";
+
 export default function Buttons({ scrollLeft, setScrollLeft }) {
-  const sliderLength = 10;
+  const sliderLength = SLIDER_LENGTH;
 
   const previousHandler = () => {
     const slider = document.querySelector(".slider-container");
