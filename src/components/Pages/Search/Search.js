@@ -23,7 +23,7 @@ export default function Search() {
       <Navbar />
       <SearchFields page={page} moviesHandler={moviesHandler} />
       <div className="pt-3">
-        <div className="movies-list container-fluid row">
+        <div className="movies-list container-fluid row d-grid">
           {movies.map((movie, index) => (
             <MovieCard movie={movie} key={index} />
           ))}

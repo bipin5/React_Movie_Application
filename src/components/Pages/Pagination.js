@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-import { PAGES_TO_DISPLAY, PAGE_COUNT } from "constants/constants";
+import {
+  PAGES_TO_DISPLAY,
+  PAGE_COUNT,
+  PAGINAION_START,
+} from "constants/constants";
 
 export default function Pagination({ pageChangeHandler }) {
   const [pages, setPages] = useState([]);

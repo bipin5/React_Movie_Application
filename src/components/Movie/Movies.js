@@ -38,7 +38,7 @@ export default function Movies() {
     <div className="position-relative">
       <Navbar />
       <div className="movies-list-container">
-        <div className="movies-list container-fluid row">
+        <div className="movies-list container-fluid row d-grid">
           {movies.map((movie, index) => (
             <MovieCard movie={movie} key={index} />
           ))}

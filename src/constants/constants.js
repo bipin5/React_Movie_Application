@@ -3,4 +3,5 @@ export const baseURL = "https://api.themoviedb.org/3",
   IMAGE_URL = "https://image.tmdb.org/t/p/original",
   PAGES_TO_DISPLAY = 3,
   PAGE_COUNT = 20,
-  PAGINAION_START = 0;
+  PAGINAION_START = 0,
+  SLIDER_LENGTH = 10;

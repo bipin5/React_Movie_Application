@@ -12,6 +12,8 @@ import Genres from "components/Pages/MovieDetails/Genres";
 import Country from "components/Pages/MovieDetails/Country";
 import VideoPlayer from "components/Pages/MovieDetails/VideoPlayer";
 
+import { IMAGE_URL } from "constants/constants";
+
 import MovieDetailsApi from "API/movieDetailsApi";
 import CreditsApi from "API/creditsApi";
 
@@ -52,13 +54,8 @@ export default function MovieDetails() {
         <Navbar />
         <div className="pt-5">
           <div className="m-2">
-            <div className="video-container">
-              <img
-                className="img-fluid"
-                src={`${IMAGE_URL}${movie.poster_path}`}
-                alt={movie.original_title}
-              />
-            </div>
+            <VideoPlayer movie={movie} />
+
             <div className="p-2 m-sm-auto movie-details col-md-6">
               <h3>{movie.original_title}</h3>
               <p>{movie.overview}</p>
