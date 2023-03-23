@@ -10,11 +10,10 @@ import Actors from "components/Pages/MovieDetails/Actors";
 import Directors from "components/Pages/MovieDetails/Directors";
 import Genres from "components/Pages/MovieDetails/Genres";
 import Country from "components/Pages/MovieDetails/Country";
+import VideoPlayer from "components/Pages/MovieDetails/VideoPlayer";
 
 import MovieDetailsApi from "API/movieDetailsApi";
 import CreditsApi from "API/creditsApi";
-
-import { IMAGE_URL } from "constants/constants";
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState([]);
