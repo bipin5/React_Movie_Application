@@ -1,6 +1,9 @@
-import "assets/scss/index.scss";
-import { IMAGE_URL } from "constants/constants";
 import { useEffect, useState } from "react";
+
+import "assets/scss/index.scss";
+
+import { IMAGE_URL } from "constants/constants";
+
 import MovieApi from "API/movieApi";
 
 export default function Sliders({ handleClick, scrollLeft, setScrollLeft }) {
