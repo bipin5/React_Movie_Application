@@ -6,6 +6,7 @@ import {
   PAGINAION_START,
 } from "constants/constants";
 
+
 export default function Pagination({ pageChangeHandler }) {
   const [pages, setPages] = useState([]);
   const [page, setPage] = useState();
