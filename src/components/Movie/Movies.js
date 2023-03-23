@@ -4,6 +4,7 @@ import "assets/scss/index.scss";
 
 import Footer from "components/Footer/Footer";
 import Navbar from "components/Navbar/navbar";
+import Pagination from "components/Pages/Pagination";
 
 import MovieApi from "API/movieApi";
 
@@ -11,10 +12,11 @@ import MovieCard from "./MovieCard";
 
 export default function Movies() {
   const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(1);
 
   const getLatestMovies = async () => {
     try {
-      const results = await MovieApi();
+      const results = await MovieApi(page);
 
       setMovies(results.data.results);
     } catch (error) {
@@ -22,21 +24,25 @@ export default function Movies() {
     }
   };
 
+  const pageChangeHandler = (page) => {
+    setPage(page);
+  };
+
   useEffect(() => {
     getLatestMovies();
-  }, []);
+  }, [movies]);
 
   return (
     <div className="position-relative">
       <Navbar />
       <div className="movies-list-container">
         <div className="movies-list container-fluid row">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} />
+          {movies.map((movie, index) => (
+            <MovieCard movie={movie} key={index} />
           ))}
         </div>
       </div>
-
+      <Pagination pageChangeHandler={pageChangeHandler} />
       <Footer />
     </div>
   );
