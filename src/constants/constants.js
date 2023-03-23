@@ -5,3 +5,4 @@ export const baseURL = "https://api.themoviedb.org/3",
   PAGE_COUNT = 20,
   PAGINAION_START = 0,
   SLIDER_LENGTH = 10;
+
