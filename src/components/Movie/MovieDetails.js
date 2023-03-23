@@ -52,11 +52,17 @@ export default function MovieDetails() {
         <Navbar />
         <div className="pt-5">
           <div className="m-2">
-            <VideoPlayer movie={movie} />
-            <div className="p-2 m-sm-auto movie-details">
+            <div className="video-container">
+              <img
+                className="img-fluid"
+                src={`${IMAGE_URL}${movie.poster_path}`}
+                alt={movie.original_title}
+              />
+            </div>
+            <div className="p-2 m-sm-auto movie-details col-md-6">
               <h3>{movie.original_title}</h3>
               <p>{movie.overview}</p>
-              <div className="details-list">
+              <div className="details-list d-grid">
                 <Genres movie={movie} />
                 <Actors credits={credits} />
                 <Directors credits={credits} />

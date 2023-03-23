@@ -11,8 +11,10 @@ import MovieApi from "API/movieApi";
 import MovieCard from "./MovieCard";
 
 export default function Movies() {
+  const INITIAL_PAGE = 1;
+
   const [movies, setMovies] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(INITIAL_PAGE);
 
   const getLatestMovies = async () => {
     try {
