@@ -1,8 +1,20 @@
 // movie banner
 @import "./banner/banner";
 
+// movies list
+@import "./movieCard/movies";
+
 // movie card
 @import "./movieCard/movieCard";
 
 // navbar
 @import "./navbar/navbar";
+
+// movie details
+@import "./movieDetails/movieDetails";
+
+// video player
+@import "./videoPlayer/videoPlayer";
+
+// search fields
+@import "./pages/searchFields";

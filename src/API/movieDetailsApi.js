@@ -2,14 +2,14 @@ import axios from "axios";
 
 import { baseURL, API_KEY } from "constants/constants";
 
-export default async function MovieApi(page) {
+export default async function MovieDetailsApi(id) {
   try {
     const response = await axios.get(
-      `${baseURL}/movie/popular?api_key=${API_KEY}&page=${page}`
+      `${baseURL}/movie/${id}?api_key=${API_KEY}`
     );
 
     return response;
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
   }
 }

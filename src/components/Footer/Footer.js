@@ -29,7 +29,7 @@ export default function Footer() {
           <FontAwesomeIcon icon={faCalendar} />
         </div>
         <div>
-          <span className="text-white"> Release Date 2023-03-13</span>
+          <span className="text-white"> Release Date 2023</span>
         </div>
       </div>
     </footer>
