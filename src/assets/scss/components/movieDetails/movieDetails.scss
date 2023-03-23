@@ -15,4 +15,9 @@
     .movie-details{
         width: 75%;
     }
+    .details-list{
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
 } 

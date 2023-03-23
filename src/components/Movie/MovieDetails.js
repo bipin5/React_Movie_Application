@@ -12,6 +12,8 @@ import Genres from "components/Pages/MovieDetails/Genres";
 import Country from "components/Pages/MovieDetails/Country";
 import VideoPlayer from "components/Pages/MovieDetails/VideoPlayer";
 
+import { IMAGE_URL } from "constants/constants";
+
 import MovieDetailsApi from "API/movieDetailsApi";
 import CreditsApi from "API/creditsApi";
 
@@ -53,10 +55,11 @@ export default function MovieDetails() {
         <div className="pt-5">
           <div className="m-2">
             <VideoPlayer movie={movie} />
-            <div className="p-2 m-sm-auto movie-details">
+
+            <div className="p-2 m-sm-auto movie-details col-md-6">
               <h3>{movie.original_title}</h3>
               <p>{movie.overview}</p>
-              <div className="details-list">
+              <div className="details-list d-grid">
                 <Genres movie={movie} />
                 <Actors credits={credits} />
                 <Directors credits={credits} />
