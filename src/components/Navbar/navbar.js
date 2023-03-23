@@ -55,7 +55,7 @@ export default function Navbar() {
             </li>
           </ul>
           <div>
-            <a href="/">
+            <a href="/search">
               <FontAwesomeIcon icon={faSearch} />
             </a>
           </div>
