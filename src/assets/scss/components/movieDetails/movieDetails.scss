@@ -1,0 +1,22 @@
+.movie-details{
+    color: $grey-200;
+}
+
+.movie-details p{
+    color: $grey-500;
+}
+
+.movie-details p span:first-child{
+    color: $grey-200;
+}
+
+.video-container{
+    height: 20%;
+    width: 55%;
+}
+
+@media (min-width: 576px){
+    .movie-details{
+        width: 75%;
+    }
+} 
