@@ -1,0 +1,30 @@
+name: "React Movie App"
+on:
+ push:
+ pull_request:
+ issues:
+   types:
+     - opened
+     - closed
+     - reopened
+     - edited
+     - deleted
+     - pinned
+     - unpinned
+     - assigned
+     - unassigned
+     - labeled
+     - unlabeled
+     - milestoned
+     - demilestoned
+ issue_comment:
+   types: [created, edited, deleted]
+ create:
+ delete:
+ steps:
+   - name: Send Slack notification
+ jobs:
+ notify_slack:
+   runs-on: ubuntu-latest
+ env:
+       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
